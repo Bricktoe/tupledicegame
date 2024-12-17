@@ -14,8 +14,8 @@ def play_game():
     Main function to simulate the tuple dice game.
     Tracks the player's cumulative score and high score.
     """
-    print("Welcome to the Tuple Dice Game!")
-    print("Try to get the highest score possible!")
+    print("🎲🎉 Welcome to the Tuple Dice Game! 🎉🎲")
+    print("Try to get the highest score possible! 🚀")
     
     high_score = 0
     current_score = 0
