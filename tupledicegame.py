@@ -22,12 +22,16 @@ def play_game():
     high_score = 0
     current_score = 0
     playing = True
-    
-roll_history = pd.DataFrame(columns=["Die 1", "Die 2", "Total"])    
+    roll_history = pd.DataFrame(columns=["Die 1", "Die 2", "Total"])    
 
     while playing:
         input("👉 Press Enter to roll the dice... 🎲")
         dice_roll = roll_dice()
+        # Add roll data to the DataFrame
+        roll_history = roll_history.append({"Die 1": dice_roll[0], 
+                                    "Die 2": dice_roll[1], 
+                                    "Total": dice_roll[2]}, 
+                                   ignore_index=True)
         print(f"🎲 You rolled: {dice_roll[0]} and {dice_roll[1]} (Total: {dice_roll[2]}) 🎲")
         
         current_score += dice_roll[2]
