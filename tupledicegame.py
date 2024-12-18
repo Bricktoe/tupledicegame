@@ -23,6 +23,8 @@ def play_game():
     current_score = 0
     playing = True
     roll_history = pd.DataFrame(columns=["Die 1", "Die 2", "Total"])    
+    
+    start_time = time.time()  # Record the game start time
 
     while playing:
         input("👉 Press Enter to roll the dice... 🎲")
@@ -46,6 +48,10 @@ def play_game():
         choice = input("Do you want to roll again? (yes/no): ").strip().lower()
         if choice != "yes":
             playing = False
+            
+    end_time = time.time()  # Record the game end time**
+    duration = end_time - start_time  # Calculate the total game duration**
+    print(f"\n⏱️ Total playtime: {duration:.2f} seconds")**  # Display game duration
     
     print("\n🎮 Game Over! 🎮")
     print(f"Your final score: {current_score}")
