@@ -22,9 +22,9 @@ def play_game():
     playing = True
     
     while playing:
-        input("Press Enter to roll the dice...")
+        input("👉 Press Enter to roll the dice... 🎲")
         dice_roll = roll_dice()
-        print(f"You rolled: {dice_roll[0]} and {dice_roll[1]} (Total: {dice_roll[2]})")
+        print(f"🎲 You rolled: {dice_roll[0]} and {dice_roll[1]} (Total: {dice_roll[2]}) 🎲")
         
         current_score += dice_roll[2]
         print(f"Your current score is: {current_score}")
@@ -32,7 +32,7 @@ def play_game():
         # Update high score if current score exceeds it
         if current_score > high_score:
             high_score = current_score
-            print(f"New high score: {high_score}!")
+            print(f"🏆 New high score: {high_score}! 🎉")
         
         # Ask if the player wants to roll again
         choice = input("Do you want to roll again? (yes/no): ").strip().lower()
@@ -41,8 +41,8 @@ def play_game():
     
     print("\n🎮 Game Over! 🎮")
     print(f"Your final score: {current_score}")
-    print(f"Your high score: {high_score}")
-    print("Thanks for playing!")
+    print(f"🏅 Your high score: {high_score}")
+    print("🎲 Thanks for playing!")
 
 # Seed for consistent results during testing
 random.seed(42)
