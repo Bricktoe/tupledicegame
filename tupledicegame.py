@@ -23,6 +23,8 @@ def play_game():
     current_score = 0
     playing = True
     
+roll_history = pd.DataFrame(columns=["Die 1", "Die 2", "Total"])    
+
     while playing:
         input("👉 Press Enter to roll the dice... 🎲")
         dice_roll = roll_dice()
