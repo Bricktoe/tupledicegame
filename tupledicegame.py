@@ -1,4 +1,6 @@
 import random
+import pandas as pd  # Added for data analysis and storing roll history
+import time  # Added for timing functions and delays
 
 def roll_dice():
     """
