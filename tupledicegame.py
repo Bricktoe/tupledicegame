@@ -39,7 +39,7 @@ def play_game():
         if choice != "yes":
             playing = False
     
-    print("\nGame Over!")
+    print("\n🎮 Game Over! 🎮")
     print(f"Your final score: {current_score}")
     print(f"Your high score: {high_score}")
     print("Thanks for playing!")
