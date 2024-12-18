@@ -3,13 +3,10 @@ import pandas as pd  # Added for data analysis and storing roll history
 import time  # Added for timing functions and delays
 
 def roll_dice():
-    """
-    Simulates rolling two dice using tuples and random choices.
-    Returns a tuple containing the values of two dice and their sum.
-    """
     die1 = random.choice(range(1, 7))  # Random number between 1 and 6
     die2 = random.choice(range(1, 7))  # Random number between 1 and 6
-    return die1, die2, die1 + die2  # Cleaner tuple return
+    die3 = random.choice(range(1, 7))  # Random number between 1 and 6
+    return die1, die2, die3, die1 + die2 + die3  # Return three dice and their sum
 
 def play_game():
     """
