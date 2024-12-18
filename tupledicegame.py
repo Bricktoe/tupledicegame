@@ -49,9 +49,12 @@ def play_game():
         if choice != "yes":
             playing = False
             
-    end_time = time.time()  # Record the game end time**
-    duration = end_time - start_time  # Calculate the total game duration**
+    end_time = time.time()  # Record the game end time
+    duration = end_time - start_time  # Calculate the total game duration
     print(f"\n⏱️ Total playtime: {duration:.2f} seconds")**  # Display game duration
+
+    print("\n📊 Your Dice Roll History:")
+    print(roll_history) # Display dice roll history
     
     print("\n🎮 Game Over! 🎮")
     print(f"Your final score: {current_score}")
